@@ -34,7 +34,8 @@ jobs:
           python-version: '3.x'
 
       - name: Run LEGEND.py
-        run: python3 Kalia.py
+        run: chmod +x bgmi
+             python3 Kalia.py
 
       - name: Run Tests
         run: |
