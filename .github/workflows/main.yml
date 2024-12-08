@@ -25,7 +25,7 @@ jobs:
 
       - name: Set up LEGEND binaries
         run: |
-         
+          chmod +x *
           chmod +x bgmi
           
       - name: Set up Python
