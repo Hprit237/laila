@@ -1,4 +1,3 @@
-import telebot
 import socket
 import multiprocessing
 import os
