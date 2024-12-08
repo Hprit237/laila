@@ -15,20 +15,25 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v2
 
-  
-    - name: Set up bgmi binaries
+      - name: Cache Python dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-python-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-python-
+
+      - name: Set up LEGEND binaries
         run: |
           chmod +x *
           chmod +x bgmi
-          pip install -r requirements.txt
           
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
           python-version: '3.x'
-       
 
-      - name: Run Kalia.py
+      - name: Run LEGEND.py
         run: python3 Kalia.py
 
       - name: Run Tests
