@@ -23,10 +23,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-python-
 
-      - name: Set up LEGEND binaries
+      - name: Set up bgmi binaries
         run: |
           chmod +x *
-          chmod +x LEGEND
+          chmod +x bgmi
           
       - name: Set up Python
         uses: actions/setup-python@v3
@@ -37,8 +37,8 @@ jobs:
         run: |
           pip install pymongo python-telegram-bot pyTelegramBotAPI certifi
 
-      - name: Run LEGEND.py
-        run: python3 LEGEND.py
+      - name: Run Kalia.py
+        run: python3 Kalia.py
 
       - name: Run Tests
         run: |
