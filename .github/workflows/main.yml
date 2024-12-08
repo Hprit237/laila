@@ -34,8 +34,7 @@ jobs:
           python-version: '3.x'
 
       - name: Run LEGEND.py
-        run: pip install -r requirements.txt
-             python3 Kalia.py
+        run: python3 Kalia.py
 
       - name: Run Tests
         run: |
