@@ -34,7 +34,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install required packages
-        run:
+       
 
       - name: Run Kalia.py
         run: python3 Kalia.py
