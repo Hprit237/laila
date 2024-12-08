@@ -32,8 +32,6 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: '3.x'
-
-      - name: Install required packages
        
 
       - name: Run Kalia.py
